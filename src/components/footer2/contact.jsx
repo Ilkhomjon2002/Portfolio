@@ -1,14 +1,17 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import { Window } from "./style";
 import img1 from "../../assets/pexels-eduardo-dutra-2115217.jpg";
 import Login from "./form";
-import { useInView } from 'react-intersection-observer';
-
+import { useInView } from "react-intersection-observer";
+import "../../sass/contact.style.scss";
 const Contact = () => {
-	const { ref, inView} = useInView();
+	const { ref, inView } = useInView();
 	return (
-		<div className={`${inView ? 'refContact' : 'contact'}`} id="Contact" ref={ref} >
+		<div
+			className={`${inView ? "refContact" : "contact"}`}
+			id="Contact"
+			ref={ref}
+		>
 			<LoadScript googleMapsApiKey="AIzaSyAkkKvMyf8Tk3Q8s7MWXin6njbtjIjq2S4">
 				<GoogleMap
 					mapContainerStyle={{ width: "100%", height: "100vh" }}
@@ -106,16 +109,16 @@ const Contact = () => {
 					<Marker position={{ lat: 33, lng: 133 }}></Marker>
 				</GoogleMap>
 			</LoadScript>
-			<Window>
-				<Window.ImgContainer>
-					<Window.Img src={img1}></Window.Img>
-					<Window.Title>
-						<Window.H1>Contact Us</Window.H1>
-						<Window.P>Feel free to drop us a line below!</Window.P>
-					</Window.Title>
-				</Window.ImgContainer>
+			<div className="Window">
+				<div className="ImgContainer">
+					<img className="Img" src={img1}></img>
+					<div className="Title">
+						<h1 className="H1">Contact Us</h1>
+						<p className="P">Feel free to drop us a line below!</p>
+					</div>
+				</div>
 				<Login></Login>
-			</Window>
+			</div>
 		</div>
 	);
 };

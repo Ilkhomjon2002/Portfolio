@@ -1,25 +1,28 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: "Oxanium", cursive;
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+body {
+	background-color: $base-color;
+}
+#root {
+	display: grid;
+	grid-template-columns: [main-start] 30rem [content-start] repeat(4, 1fr) [content-end] 30rem [main-end];
+	grid-template-rows: 7rem min-content;
 
+	align-items: center;
+}
 
-*,*::after,*::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-html{
-  font-size: 62.50%;
-  font-family: 'Oxanium', cursive;
-  ::-webkit-scrollbar {
-    display: none;
-}
-}
-body{
-  background-color: $base-color;
-}
-#root{
-  display: grid;
-  grid-template-columns: [main-start] 30rem [content-start] repeat(4,1fr) [content-end] 30rem [main-end];
-  grid-template-rows: 7rem min-content;
-  
-  align-items: center;
+.gap {
+	gap: 5rem;
 }

@@ -1,17 +1,10 @@
 import React from "react";
-import {
-	ErrorWindow,
-	Input,
-	Label,
-	ContactForm,
-	Submit,
-	Arrow,
-	InputContainer,
-} from "./form-style";
+
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import "../../sass/form-style.scss";
 const Login = () => {
 	const Formik = useFormik({
 		initialValues: {
@@ -31,80 +24,91 @@ const Login = () => {
 	console.log(Formik);
 
 	return (
-		<ContactForm onSubmit={Formik.handleSubmit}>
-			<InputContainer>
-				<Label for="fullname">Full Name:</Label>
-				<Input
+		<form className="ContactForm" onSubmit={Formik.handleSubmit}>
+			<div className="InputContainer">
+				<label className="Label" for="fullname">
+					Full Name:
+				</label>{" "}
+				<input
+					className="Input"
 					id="fullname"
 					name="fullname"
 					type={"text"}
 					value={Formik.values.fullname}
 					placeholder="Enter full name"
 					onChange={Formik.handleChange}
-				></Input>
+				></input>
 				{Formik.errors.fullname && Formik.touched.fullname && (
-					<ErrorWindow>
+					<div className="ErrorWindow">
 						{Formik.errors.fullname}{" "}
 						<FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon>
-					</ErrorWindow>
+					</div>
 				)}
-			</InputContainer>
-			<InputContainer>
-				<Label for="email">Email:</Label>
-				<Input
-					className="contact-input"
+			</div>
+			<div className="InputContainer">
+				<label className="Label" for="email">
+					Email:
+				</label>
+				<input
+					className="Input contact-input"
 					id="email"
 					name="email"
 					type={"email"}
 					value={Formik.values.email}
 					placeholder="Enter email address"
 					onChange={Formik.handleChange}
-				></Input>
+				></input>
 				{Formik.errors.email && Formik.touched.email && (
-					<ErrorWindow>
+					<div className="ErrorWindow">
 						{Formik.errors.email}{" "}
 						<FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon>
-					</ErrorWindow>
+					</div>
 				)}
-			</InputContainer>
-			<InputContainer>
-				<Label for="phone">Phone:</Label>
-				<Input
+			</div>
+			<div className="InputContainer">
+				<label className={"Label"} for="phone">
+					Phone:
+				</label>
+				<input
+					className="Input"
 					id="phone"
 					name="phone"
 					type={"text"}
 					value={Formik.values.phone}
 					placeholder="Enter phone number"
 					onChange={Formik.handleChange}
-				></Input>
+				></input>
 				{Formik.errors.phone && Formik.touched.phone && (
-					<ErrorWindow>
+					<div className="ErrorWindow">
 						{Formik.errors.phone}{" "}
 						<FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon>
-					</ErrorWindow>
+					</div>
 				)}
-			</InputContainer>
-			<InputContainer>
-				<Label for="message">Message:</Label>
-				<Input
+			</div>
+			<div className="InputContainer">
+				<label className="Label" for="message">
+					Message:
+				</label>
+				<input
+					className="Input"
 					id="message"
 					name="message"
 					type={"message"}
 					value={Formik.values.message}
 					placeholder="Your Comment..."
 					onChange={Formik.handleChange}
-				></Input>
+				></input>
 				{Formik.errors.message && Formik.touched.message && (
-					<ErrorWindow>
+					<div className="ErrorWindow">
 						{Formik.errors.message}{" "}
 						<FontAwesomeIcon icon={faCircleExclamation}></FontAwesomeIcon>
-					</ErrorWindow>
+					</div>
 				)}
-			</InputContainer>
-			<Submit type={"submit"}>
-				Submit <Arrow>→</Arrow>
-			</Submit>
-		</ContactForm>
+			</div>
+			<button className="Submit" type={"submit"}>
+				Submit <span className="Arrow">→</span>
+			</button>
+		</form>
 	);
 };
 

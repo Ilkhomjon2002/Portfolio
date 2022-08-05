@@ -1,5 +1,4 @@
-import styled from "styled-components";
-const Window = styled.div`
+.Window {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -17,39 +16,37 @@ const Window = styled.div`
 		cursor: pointer;
 		box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
 	}
-`;
-Window.ImgContainer = styled.div`
+}
+.ImgContainer {
 	position: relative;
 	height: 200px;
 	width: 100%;
 	overflow: hidden;
-`;
-Window.Img = styled.img`
+}
+.Img {
 	object-fit: cover;
 	height: 200px;
 	width: 100%;
-`;
-Window.Title = styled.div`
+}
+.Title {
 	position: absolute;
 	top: 50%;
 	text-align: center;
 	left: 50%;
 	transform: translate(-50%, -50%);
-`;
-Window.H1 = styled.h1`
+}
+.H1 {
 	font-size: 22px;
 	color: #ffffff;
 	font-weight: 700;
 	margin: 0;
 	padding-bottom: 7px;
 	letter-spacing: 2px;
-`;
-Window.P = styled.p`
+}
+.P {
 	font-size: 20px;
 	color: #ffffff;
 	font-weight: 400;
 	margin: 0;
 	padding-bottom: 7px;
-`;
-
-export { Window };
+}
