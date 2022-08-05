@@ -147,7 +147,7 @@ const cards = [
 		description:
 			"This site is built for learning advanced features of JS Dom. A credit to origianl author, Jonas Schmedtman, is of course highly appreciated!. All UI design is his. I recreated it by myself according to his UI design.😁",
 		image: Dom,
-		link: "advanced-r0w10q62g-ilkhomjon2002.vercel.app",
+		link: "https://advanced-dom-ashy.vercel.app/",
 		imageRatio: 784 / 1016,
 	},
 	{
