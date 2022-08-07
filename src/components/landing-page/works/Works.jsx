@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { useSpring, animated } from "react-spring";
 import Dom from "../../../assets/dom.png";
 import Houzing from "../../../assets/houzing.png";
-import GreenShop from "../../../assets/greenshop.png";
+import MemoryGame from "../../../assets/Screenshot.png";
 import { useInView } from "react-intersection-observer";
 
 export function Works() {
@@ -145,7 +145,7 @@ const cards = [
 	{
 		title: "Advanced Dom🍀",
 		description:
-			"This site is built for learning advanced features of JS Dom. A credit to origianl author, Jonas Schmedtman, is of course highly appreciated!. All UI design is his. I recreated it by myself according to his UI design.😁",
+			"This site is built for learning advanced features of JS Dom. A credit to origianl author, Jonas Schmedtman, is of course highly appreciated!. All UI design is his. I recreated it by myself according to his UI design.😁 JS Dom features such as intersection observer and lazy loading of images were used in this project.",
 		image: Dom,
 		link: "https://advanced-dom-ashy.vercel.app/",
 		imageRatio: 784 / 1016,
@@ -153,17 +153,17 @@ const cards = [
 	{
 		title: "Houzing 🏠",
 		description:
-			"This is my first big-project, I ever did, after learning HTML, CSS, Sass, Js, React.js. This is fully developed web-site which integrates with back-end also. This site is for selling, renting and  buying houses. There are almost all the features and parts that modern site can contain in this site. Such as: Login section, Carousel, Search Section, Carts, Form and others. All of them are reusable components.  ",
+			"This is my first big-project, I ever did, after learning HTML, CSS, Sass, Js, React.js. This is fully developed web-site which integrates with back-end also. This site is for selling, renting and  buying houses. There are almost all the features and parts that modern site can contain in this site. Such as: Login section, Carousel, Search Section, Carts, Form and others. All of them are reusable components. This site is still in the process of development.  ",
 		image: Houzing,
 		link: "https://intern-bay.vercel.app/home",
 		imageRatio: 730 / 1030,
 	},
 	{
-		title: "GreenShop",
+		title: "Memory Game",
 		description:
-			"While I was learning React I had minor projects using React.Js to remember what I was learning. Params, States , Context were used while developing this small website.",
-		link: "https://greenshop-eight.vercel.app",
-		image: GreenShop,
+			"Developed with vanilla javascript to learn more features of javascript. The game has 3 setting, First you have to choose type of game : icons or numbers, in both cases you have to find pairs of numbers, second setting is number of players , you can choose from 1 to 4, and the last setting is size of game : 4x4 or 6x6 ,these numbers are size of columns and rows. ",
+		link: "https://memory-game2-delta.vercel.app/",
+		image: MemoryGame,
 		imageRatio: 730 / 1030,
 	},
 ];
